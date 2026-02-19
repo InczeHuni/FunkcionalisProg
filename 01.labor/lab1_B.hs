@@ -6,6 +6,7 @@ osszeg a b = a + b
 
 kulonbseg :: Double -> Double -> Double
 kulonbseg a b = a - b
+-- (-) a b
 
 szorzat :: Int -> Int -> Int
 szorzat a b = a * b
@@ -54,7 +55,23 @@ min_ a b
   | a < b = a
   | otherwise = b
 
+min1 a b = if a < b then a else b
+
 -- - egy másodfokú egyenlet gyökeit,
+
+--a*(x**2) + b*x +c = 0 -> a,b,c bemeneti arg.
+--delta =b**2 -4*a*c
+--gy1 = (-b + sqrt delta) /2*a
+--gy2 = (-b - sqrt delta) /2*a
+
+masodF a b c 
+  | delta < 0 =  error "komplex szamok"
+  | otherwise = (gy1,gy2)
+  where
+    delta =b**2 -4*a*c
+    gy1 = (-b + sqrt delta) /(2*a)
+    gy2 = (-b - sqrt delta) /(2*a)
+
 -- - hogy két elempár értékei "majdnem" megegyeznek-e: akkor térít vissza True értéket a függvény, ha a két pár ugyanazokat az értékeket tartalmazza függetlenül az elemek sorrendjétől.
 --   Például: $$(6, 7)$$ egyenlő $$(7,6)$$-al, de $$(6, 7)$$ nem egyenlő $$(4, 7)$$-el.
 -- - az n szám faktoriálisát (3 módszer),
