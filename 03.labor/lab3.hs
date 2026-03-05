@@ -1,0 +1,1 @@
+atlag ls = (sum ls)/fromIntegral (length ls)
