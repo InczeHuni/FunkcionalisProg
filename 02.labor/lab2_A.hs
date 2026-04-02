@@ -1,4 +1,4 @@
-import Control.Monad.Trans.Cont (reset)
+
 szjSzorzat 0 = 1
 szjSzorzat n = mod n 10 * szjSzorzat (div n 10)
 
