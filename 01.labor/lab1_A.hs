@@ -164,4 +164,3 @@ main = do
       ep2 = (4,7)
   putStrLn ("elempar" ++ show ep1 ++ " " ++ show ep2 ++ show (elempar ep1 ep1))
   print (tf2 10)  
-
